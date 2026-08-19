@@ -1,1 +1,158 @@
+:root {
+  --bg-color: #0f1115;
+  --card-bg: #181b20;
+  --card-border: #262a32;
+  --accent-gold: #d4af37;
+  --text-main: #f0f2f5;
+  --text-muted: #8a909a;
+  --btn-primary: #d4af37;
+  --btn-text: #0f1115;
+}
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#app {
+  width: 100%;
+  max-width: 480px;
+  padding: 16px;
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Шапка */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.logo-title {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--accent-gold);
+}
+
+.key-badge {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Карточки */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.workout-header h2 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Кнопки и Панель */
+.controls-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.timer-display {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--accent-gold);
+  font-mono: monospace;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-primary {
+  background: var(--btn-primary);
+  color: var(--btn-text);
+}
+
+.btn-secondary {
+  background: var(--card-border);
+  color: var(--text-main);
+}
+
+.btn:active {
+  opacity: 0.8;
+}
+
+/* Нижняя навигация */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 480px;
+  background: var(--card-bg);
+  border-top: 1px solid var(--card-border);
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.nav-btn.active {
+  color: var(--accent-gold);
+}
+
+.nav-icon {
+  font-size: 18px;
+}
